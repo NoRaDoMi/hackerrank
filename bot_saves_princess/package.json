@@ -1,0 +1,6 @@
+{ "name" : "bot-saves-princess"
+, "version" : "1.0.0"
+, "dependencies" : [
+    "mocha"
+  ]
+}
