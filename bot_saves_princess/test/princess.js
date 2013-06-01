@@ -12,7 +12,7 @@ describe("Princess", function() {
           , "---"
         ].join("\n"));
 
-        assert.equal( 0 , bot.princess.posX() )
+        assert.equal( 0 , bot.princess.x )
     });
 
     it("is 1 when the princess is in the second column",
@@ -24,7 +24,7 @@ describe("Princess", function() {
           , "-p-"
         ].join("\n"));
 
-        assert.equal( 1, bot.princess.posX() );
+        assert.equal( 1, bot.princess.x );
     });
 
     it("is 2 when the princess is in the third column",
@@ -36,7 +36,7 @@ describe("Princess", function() {
           , "---"
         ].join("\n"));
 
-        assert.equal( 2, bot.princess.posX() );
+        assert.equal( 2, bot.princess.x );
     });
   })
 
@@ -50,7 +50,7 @@ describe("Princess", function() {
           , "---"
         ].join("\n"));
 
-        assert.equal( 0 , bot.princess.posY() )
+        assert.equal( 0 , bot.princess.y )
     });
 
     it("is 1 when the princess is in the second row",
@@ -62,7 +62,7 @@ describe("Princess", function() {
           , "---"
         ].join("\n"));
 
-        assert.equal( 1 , bot.princess.posY() )
+        assert.equal( 1 , bot.princess.y )
     });
 
     it("is 2 when the princess is in the third row",
@@ -74,7 +74,7 @@ describe("Princess", function() {
           , "p--"
         ].join("\n"));
 
-        assert.equal( 2 , bot.princess.posY() )
+        assert.equal( 2 , bot.princess.y )
     });
   });
 });
