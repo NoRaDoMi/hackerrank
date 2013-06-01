@@ -3,7 +3,6 @@ var assert = require("assert")
 
 describe("Princess", function() {
   describe("posX", function() {
-
     it("is 0 when the princess is in the first column",
       function() {
         var bot = new botSavesPrincess([
@@ -39,6 +38,43 @@ describe("Princess", function() {
 
         assert.equal( 2, bot.princess.posX() );
     });
-   
   })
+
+  describe("posY", function() {
+    it("is 0 when the princess is in the first row",
+      function() {
+        var bot = new botSavesPrincess([
+            "3"
+          , "-p-"
+          , "---"
+          , "---"
+        ].join("\n"));
+
+        assert.equal( 0 , bot.princess.posY() )
+    });
+
+    it("is 1 when the princess is in the second row",
+      function() {
+        var bot = new botSavesPrincess([
+            "3"
+          , "---"
+          , "--p"
+          , "---"
+        ].join("\n"));
+
+        assert.equal( 1 , bot.princess.posY() )
+    });
+
+    it("is 2 when the princess is in the third row",
+      function() {
+        var bot = new botSavesPrincess([
+            "3"
+          , "---"
+          , "---"
+          , "p--"
+        ].join("\n"));
+
+        assert.equal( 2 , bot.princess.posY() )
+    });
+  });
 });

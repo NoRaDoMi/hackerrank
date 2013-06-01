@@ -1,7 +1,12 @@
 function Princess( size, cells ) {
   this.index = cells.indexOf("p");
+
   this.posX = function() {
     return (this.index % size);
+  }
+
+  this.posY = function() {
+    return Math.floor( this.index / size );
   }
 }
 
