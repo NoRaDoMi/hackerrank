@@ -1,0 +1,10 @@
+#!/bin/bash
+echo 'process.stdin.resume();' > submission
+echo 'process.stdin.setEncoding("ascii");' >> submission
+echo 'process.stdin.on("data", function (input) {' >> submission
+
+for file in lib/*.js ; do
+  cat $file >> submission
+done
+
+echo '});' >> submission
