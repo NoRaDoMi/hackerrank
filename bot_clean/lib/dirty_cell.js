@@ -10,6 +10,10 @@ DirtyCell.prototype = {
 
     return Math.sqrt( deltaX + deltaY );
   }
+
+, 'position' : function() {
+    return [this.x, this.y].join(' ');
+  }
 }
 
 module.exports = DirtyCell

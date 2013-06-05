@@ -11,6 +11,13 @@ describe("DirtyCell", function() {
     assert.equal( 2, dirtyCell.y );
   });
 
+  describe("position", function() {
+    it("returns the space delimited co-ordinates", function() {
+      var dirtyCell = new DirtyCell(3, 4);
+      assert.equal( "3 4", dirtyCell.position() );
+    });
+  });
+
   describe("distanceFrom", function() {
     it("returns the delta of the co-ordinates", function() {
       var dirtyCell = new DirtyCell(-2, 1)
