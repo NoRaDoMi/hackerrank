@@ -1,0 +1,12 @@
+def next_move posx, posy, board
+    print board.inspect
+end
+
+pos = gets.split.map {|i| i.to_i}
+board = Array.new(5)
+
+(0...5).each do |i|
+    board[i] = gets.strip
+end
+
+puts next_move pos[0], pos[1], board

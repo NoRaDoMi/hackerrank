@@ -1,0 +1,3 @@
+#!/bin/bash
+cpp -P template submission
+echo -e "#!/usr/bin/ruby\n$(cat submission)" > submission
